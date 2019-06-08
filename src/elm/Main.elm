@@ -1,8 +1,12 @@
 module Main exposing (main)
 
 import Browser
-import Html exposing (Html, a, div, footer, h1, header, img, li, nav, node, p, text, ul)
-import Html.Attributes exposing (class, src)
+import Html exposing (Html, a, div, footer, h1, header, img, li, nav, node, p, section, text, ul)
+import Html.Attributes exposing (class, href, id, src)
+import View.Company exposing (viewCompany)
+import View.Team exposing (viewTeam)
+import View.Vision exposing (viewVision)
+import View.Works exposing (viewWorks)
 
 
 main =
@@ -56,7 +60,10 @@ view model =
         [ siteHeader
         , node "main"
             []
-            [ img [ src "./assets/images/logo.png" ] []
+            [ viewVision
+            , viewTeam
+            , viewWorks
+            , viewCompany
             ]
         , siteFooter
         ]
@@ -70,18 +77,10 @@ siteHeader =
         , img [ src "./assets/images/icon.png" ] []
         , nav []
             [ ul []
-                [ li []
-                    [ a [] [ text "about us" ]
-                    ]
-                , li []
-                    [ a [] [ text "member" ]
-                    ]
-                , li []
-                    [ a [] [ text "case" ]
-                    ]
-                , li []
-                    [ a [] [ text "company" ]
-                    ]
+                [ li [] [ a [ href "#vision" ] [ text "about us" ] ]
+                , li [] [ a [ href "#team" ] [ text "member" ] ]
+                , li [] [ a [ href "#works" ] [ text "case" ] ]
+                , li [] [ a [ href "#company" ] [ text "company" ] ]
                 ]
             ]
         ]

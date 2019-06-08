@@ -4856,6 +4856,12 @@ var elm$html$Html$img = _VirtualDom_node('img');
 var elm$html$Html$li = _VirtualDom_node('li');
 var elm$html$Html$nav = _VirtualDom_node('nav');
 var elm$html$Html$ul = _VirtualDom_node('ul');
+var elm$html$Html$Attributes$href = function (url) {
+	return A2(
+		elm$html$Html$Attributes$stringProperty,
+		'href',
+		_VirtualDom_noJavaScriptUri(url));
+};
 var elm$html$Html$Attributes$src = function (url) {
 	return A2(
 		elm$html$Html$Attributes$stringProperty,
@@ -4901,7 +4907,10 @@ var author$project$Main$siteHeader = A2(
 								[
 									A2(
 									elm$html$Html$a,
-									_List_Nil,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href('#vision')
+										]),
 									_List_fromArray(
 										[
 											elm$html$Html$text('about us')
@@ -4914,7 +4923,10 @@ var author$project$Main$siteHeader = A2(
 								[
 									A2(
 									elm$html$Html$a,
-									_List_Nil,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href('#team')
+										]),
 									_List_fromArray(
 										[
 											elm$html$Html$text('member')
@@ -4927,7 +4939,10 @@ var author$project$Main$siteHeader = A2(
 								[
 									A2(
 									elm$html$Html$a,
-									_List_Nil,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href('#works')
+										]),
 									_List_fromArray(
 										[
 											elm$html$Html$text('case')
@@ -4940,11 +4955,302 @@ var author$project$Main$siteHeader = A2(
 								[
 									A2(
 									elm$html$Html$a,
-									_List_Nil,
+									_List_fromArray(
+										[
+											elm$html$Html$Attributes$href('#company')
+										]),
 									_List_fromArray(
 										[
 											elm$html$Html$text('company')
 										]))
+								]))
+						]))
+				]))
+		]));
+var elm$html$Html$section = _VirtualDom_node('section');
+var elm$html$Html$table = _VirtualDom_node('table');
+var elm$html$Html$td = _VirtualDom_node('td');
+var elm$html$Html$th = _VirtualDom_node('th');
+var elm$html$Html$tr = _VirtualDom_node('tr');
+var elm$html$Html$Attributes$id = elm$html$Html$Attributes$stringProperty('id');
+var author$project$View$Company$viewCompany = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$id('company'),
+			elm$html$Html$Attributes$class('company')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('company')
+				])),
+			A2(
+			elm$html$Html$table,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$tr,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$th,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('社名')
+								])),
+							A2(
+							elm$html$Html$td,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('株式会社 sorano me')
+								]))
+						])),
+					A2(
+					elm$html$Html$tr,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$th,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('住所')
+								])),
+							A2(
+							elm$html$Html$td,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('東京都')
+								]))
+						])),
+					A2(
+					elm$html$Html$tr,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$th,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('設立')
+								])),
+							A2(
+							elm$html$Html$td,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('2019年9月')
+								]))
+						])),
+					A2(
+					elm$html$Html$tr,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$th,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('代表')
+								])),
+							A2(
+							elm$html$Html$td,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('城戸 彩乃')
+								]))
+						])),
+					A2(
+					elm$html$Html$tr,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$th,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('事業内容')
+								])),
+							A2(
+							elm$html$Html$td,
+							_List_Nil,
+							_List_fromArray(
+								[
+									A2(
+									elm$html$Html$ul,
+									_List_Nil,
+									_List_fromArray(
+										[
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													elm$html$Html$text('宇宙関連のコンテンツ作成・マーケティング')
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													elm$html$Html$text('宇宙ビジネス関連のコンサルティング')
+												])),
+											A2(
+											elm$html$Html$li,
+											_List_Nil,
+											_List_fromArray(
+												[
+													elm$html$Html$text('メディアの開発・運営')
+												]))
+										]))
+								]))
+						]))
+				]))
+		]));
+var author$project$View$Team$viewTeam = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$id('team'),
+			elm$html$Html$Attributes$class('team')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('member')
+				]))
+		]));
+var author$project$View$Vision$viewVision = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$id('vision'),
+			elm$html$Html$Attributes$class('vision')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('about us')
+				])),
+			A2(
+			elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('宇宙は挑戦しろのある未知の分野です。')
+				])),
+			A2(
+			elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('私たちsorano meは、宇宙からの視点が地球の暮らしをアップデートすると信じています。')
+				])),
+			A2(
+			elm$html$Html$p,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('宇宙分野の敷居を下げ、熱量のある人材を育て、チャレンジのサイクルを高速で回すことで、暮らしをアップデートする数々の宇宙ビジネスの芽を育てます。')
+				]))
+		]));
+var author$project$View$Works$viewWorks = A2(
+	elm$html$Html$section,
+	_List_fromArray(
+		[
+			elm$html$Html$Attributes$id('works'),
+			elm$html$Html$Attributes$class('works')
+		]),
+	_List_fromArray(
+		[
+			A2(
+			elm$html$Html$h1,
+			_List_Nil,
+			_List_fromArray(
+				[
+					elm$html$Html$text('case')
+				])),
+			A2(
+			elm$html$Html$ul,
+			_List_Nil,
+			_List_fromArray(
+				[
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$h1,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('Opening movie.')
+								])),
+							elm$html$Html$text('SPACETIDE')
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$h1,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('Escape Game')
+								])),
+							elm$html$Html$text('JAXA')
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$h1,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('Article')
+								])),
+							elm$html$Html$text('MYNAVI Public')
+						])),
+					A2(
+					elm$html$Html$li,
+					_List_Nil,
+					_List_fromArray(
+						[
+							A2(
+							elm$html$Html$h1,
+							_List_Nil,
+							_List_fromArray(
+								[
+									elm$html$Html$text('...')
 								]))
 						]))
 				]))
@@ -4964,15 +5270,7 @@ var author$project$Main$view = function (model) {
 				'main',
 				_List_Nil,
 				_List_fromArray(
-					[
-						A2(
-						elm$html$Html$img,
-						_List_fromArray(
-							[
-								elm$html$Html$Attributes$src('./assets/images/logo.png')
-							]),
-						_List_Nil)
-					])),
+					[author$project$View$Vision$viewVision, author$project$View$Team$viewTeam, author$project$View$Works$viewWorks, author$project$View$Company$viewCompany])),
 				author$project$Main$siteFooter
 			]),
 		title: 'sorano me inc.'

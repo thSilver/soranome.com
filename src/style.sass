@@ -28,12 +28,12 @@ body
   & > header.site-header
     display: grid
     grid-template-rows: 1fr 2fr
-    grid-template-columns: 1fr 1fr
+    grid-template-columns: 40% 50%
+    grid-column-gap: 10%
     height: 100vh
 
   & > main
-    display: none
-    padding: 6rem 0
+    position: static
 
   & > footer.site-footer
     position: fixed
@@ -49,7 +49,7 @@ header.site-header
     grid-column: 2
     padding-bottom: 5rem
     align-self: flex-end
-    font-size: 4rem    
+    font-size: 5rem    
 
   nav
     grid-row: 2
@@ -59,6 +59,7 @@ header.site-header
       li
         padding: 1.5rem 0
         list-style: none
+        font-size: 2rem
     
         a
           display: block
@@ -70,31 +71,39 @@ header.site-header
     display: block
     grid-row: 1 / 3
     grid-column: 1
-    width: 55%
+    width: 60%
     justify-self: center
     align-self: center
 
 main
-
   section
-    padding: 3rem 0 4rem
+    position: absolute
+    top: 0
+    right: 0
+    display: none
+    width: 60%
+    height: 100%
+    box-sizing: border-box
+    padding: 20rem 10vw 0
+    font-size: 1.7rem
+    background: hsla(200, 0%, 90%, 0.98)
 
-    & + section
-      border-top: solid 0.1rem #333
+    &:target
+      display: block
 
     h1
-      font-size: 3rem
-      font-weight: bold
+      padding-bottom: 5rem
+      font-size: 4rem
       line-height: 1.4
+      text-transform: uppercase
 
-      span
-        font-size: 2.6rem
+    p
+      margin: 2rem 0
+      line-height: 1.4
+      font-size: 1.7rem
 
     ul
       li
-        margin: 1rem 0
-        list-style: none
-
         a
           display: block
           padding: 1rem 1.5rem
@@ -115,24 +124,7 @@ main
               & + li
                 margin-left: 1rem
 
-    img
-      width: 100%
-
-
   article
-    padding: 1rem 0
-
-    h2
-      margin: 3rem 0 0
-      padding: 2rem 0
-      border-top: solid 0.1rem #333
-
-    h3
-      margin: 3rem 0 0
-  
-    p
-      margin: 1rem 0
-      line-height: 1.6
 
     a
       display: inline-block
@@ -146,63 +138,49 @@ main
       background: #FE0
       border-radius: 1.5rem
 
-      span
-        display: block
-        font-size: 1.3rem
-        font-weight: normal
+section.works
+  ul
+    li
+      margin-bottom: 3rem
+      list-style: none
+      font-size: 2rem
 
-    ul
-      padding-left: 2em
-      list-style: square
-
-      li
-        line-height: 2.6rem
-    
-    table
-      margin: 2rem 0 3rem
-      border-collapse: collapse
-
-      th
-        padding: 0.8rem 1rem
-        text-align: left
-        font-weight: normal
-        border-top: solid 0.1rem #CCC
-        border-bottom: solid 0.1rem #CCC
-
-        & + th::before
-          position: relative
-          left: -0.5rem
-          display: inline
-          padding: 0.4rem 0
-          content: ""
-          border-left: 0.1rem solid #CCC
-
-      tbody
-        tr
-          &:nth-child(even)
-            background: #EEE
-
-          td
-            padding: 0.8rem 1rem
-
-    blockquote
-      position: relative
-      margin: 0
-      padding: 0.5rem 1.5rem 0.5rem 6rem
-      background: #EEE
-      color: #666
-      border-radius: 0.5rem
-
-      &::before
+      h1
+        position: relative
         display: inline-block
-        position: absolute
-        top: 1rem
-        left: 1rem
-        content: "“"
-        font-family: sans-serif
-        color: #CCC
-        font-size: 90px
-        line-height: 1
+        padding: 0
+        width: 25rem
+        font-size: 2rem
+
+        &::after
+          position: absolute
+          right: 4rem
+          content: "/"
+
+section.company
+  table
+    width: 100%
+    border-collapse: collapse
+
+    tr
+      th
+        padding: 1rem 0
+        text-align: left
+        vertical-align: top
+        font-weight: normal
+
+        &::after
+          content: "："
+
+      td
+        padding: 1rem 1rem
+
+        ul
+          list-style: square
+          padding-left: 2rem
+
+          li
+            margin-bottom: 1rem
 
 footer.site-footer
   width: 20rem
