@@ -2,12 +2,19 @@ module View.Vision exposing (viewVision)
 
 import Browser
 import Html exposing (Html, h1, p, section, text)
-import Html.Attributes exposing (class, id)
+import Html.Attributes exposing (class)
 
 
-viewVision : Html msg
-viewVision =
-    section [ id "vision", class "vision" ]
+viewVision : Bool -> Html msg
+viewVision isCurrentPage =
+    section
+        [ class "vision"
+        , if isCurrentPage then
+            class "open"
+
+          else
+            class "close"
+        ]
         [ h1 [] [ text "about us" ]
         , p [] [ text "宇宙は挑戦しろのある未知の分野です。" ]
         , p [] [ text "私たちsorano meは、宇宙からの視点が地球の暮らしをアップデートすると信じています。" ]

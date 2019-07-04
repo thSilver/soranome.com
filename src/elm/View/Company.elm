@@ -2,12 +2,19 @@ module View.Company exposing (viewCompany)
 
 import Browser
 import Html exposing (Html, h1, li, p, section, table, td, text, th, tr, ul)
-import Html.Attributes exposing (class, id)
+import Html.Attributes exposing (class)
 
 
-viewCompany : Html msg
-viewCompany =
-    section [ id "company", class "company" ]
+viewCompany : Bool -> Html msg
+viewCompany isCurrentPage =
+    section
+        [ class "company"
+        , if isCurrentPage then
+            class "open"
+
+          else
+            class "close"
+        ]
         [ h1 []
             [ text "company" ]
         , table

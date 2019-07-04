@@ -2,11 +2,18 @@ module View.Team exposing (viewTeam)
 
 import Browser
 import Html exposing (Html, h1, section, text)
-import Html.Attributes exposing (class, id)
+import Html.Attributes exposing (class)
 
 
-viewTeam : Html msg
-viewTeam =
-    section [ id "team", class "team" ]
+viewTeam : Bool -> Html msg
+viewTeam isCurrentPage =
+    section
+        [ class "team"
+        , if isCurrentPage then
+            class "open"
+
+          else
+            class "close"
+        ]
         [ h1 [] [ text "member" ]
         ]

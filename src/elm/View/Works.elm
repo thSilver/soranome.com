@@ -2,12 +2,19 @@ module View.Works exposing (viewWorks)
 
 import Browser
 import Html exposing (Html, h1, li, section, text, ul)
-import Html.Attributes exposing (class, id)
+import Html.Attributes exposing (class)
 
 
-viewWorks : Html msg
-viewWorks =
-    section [ id "works", class "works" ]
+viewWorks : Bool -> Html msg
+viewWorks isCurrentPage =
+    section
+        [ class "works"
+        , if isCurrentPage then
+            class "open"
+
+          else
+            class "close"
+        ]
         [ h1 [] [ text "case" ]
         , ul []
             [ li []
