@@ -4,7 +4,7 @@
     "watch:html": "cpx ./src/index.html ./docs -w",
     "watch:assets": "cpx \"./src/assets/**/*\" ./docs/assets -w",
     "watch:js": "cpx ./src/main.js ./docs -w",
-    "watch:elm": "elm-live ./src/elm/Main.elm --open --start-page=index.html --dir=./docs -- --output=./docs/elm.js",
+    "watch:elm": "elm-live ./src/elm/Main.elm --open --start-page=index.html --dir=./docs --pushstate -- --output=./docs/elm.js",
     "watch:sass": "node-sass ./src/style.sass ./docs/style.css && node-sass ./src/style.sass ./docs/style.css -w -q",
     "watch": "npm-run-all -p watch:*",
     "compile:html": "cpx ./src/index.html ./public",
