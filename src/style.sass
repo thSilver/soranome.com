@@ -21,7 +21,7 @@ body
   width: 100%
   height: 100%
   font-size: 1.6rem
-  color: #000
+  color: #333
 
   @media screen and (max-width: 479px)
     background: #FFF
@@ -31,6 +31,7 @@ body
 
   @media screen and (min-width: 1280px)
     background: #FFF
+    background-image: url(./assets/images/icon_tile_br.png)
 
 a
   text-decoration: none
@@ -50,7 +51,7 @@ header.site-header
     left: 0
     right: 0
     bottom: 0
-    display: block
+    display: none
     width: 60%
     margin: auto
 
@@ -75,7 +76,11 @@ nav.global-nav
 
       a
         display: block
-        text-transform: uppercase
+        padding: 0 0.2rem
+
+        &:hover
+          background: #333
+          color: #FFF
 
 main
   height: 100%
@@ -114,22 +119,26 @@ main
         font-size: 1.7rem
 
 section.top
+  background: hsla(200, 0%, 100%, 0.98)
+
   h1
-    font-size: 5rem    
+    font-family: serif
+    font-size: 5rem
+    line-height: 1.8
+    letter-spacing: 1.8rem
 
   nav
     ul
       li
-        padding: 1.5rem 0
+        padding: 1.2rem 0
         list-style: none
         font-size: 2rem
     
         a
           display: block
-          text-transform: uppercase
 
 section:not(.top)
-  background: hsla(200, 0%, 90%, 0.98)
+  background: hsla(200, 0%, 100%, 0.98)
 
   h1
     text-transform: uppercase
