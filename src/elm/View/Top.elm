@@ -1,7 +1,7 @@
 module View.Top exposing (viewTop)
 
 import Browser
-import Html exposing (Html, a, br, h1, li, nav, section, text, ul, h2, img)
+import Html exposing (Html, a, br, h1, h2, img, li, nav, section, text, ul)
 import Html.Attributes exposing (class, href, src)
 
 
@@ -16,13 +16,12 @@ viewTop isCurrentPage =
             class "close"
         ]
         [ h1 []
-            [ text "日常を、"
+            [ text "わたしたちの日常を、"
             , br [] []
-            , text "宇宙ビジネスで"
-            , br [] []
-            , text "豊かにする。"
+            , text "宇宙ビジネスで豊かにする。"
             ]
-        , h2 [] [img [src "./assets/images/logotype.png"][]]
+        , h2 [] [ img [ src "./assets/images/logotype.png" ] [] ]
+
         -- , nav []
         --     [ ul []
         --         [ li [] [ a [ href "/vision" ] [ text "vision" ] ]

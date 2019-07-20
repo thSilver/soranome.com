@@ -110,6 +110,7 @@ view model =
             [ ul []
                 [ li [] [ a [ href "/" ] [ text "top" ] ]
                 , li [] [ a [ href "/vision" ] [ text "vision" ] ]
+
                 -- , li [] [ a [ href "/team" ] [ text "team" ] ]
                 , li [] [ a [ href "/works" ] [ text "works" ] ]
                 , li [] [ a [ href "/company" ] [ text "company" ] ]
@@ -117,10 +118,11 @@ view model =
             ]
         , nav [ class "sns-nav" ]
             [ ul []
-                [ li [] [
-                a [ href "/" ] [
-                        img [src "./assets/images/twitter.svg"][] ] 
+                [ li []
+                    [ a [ href "/" ]
+                        [ img [ src "./assets/images/twitter.svg" ] []
                         ]
+                    ]
                 ]
             ]
         , node "main"
@@ -141,8 +143,8 @@ view model =
 siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
-        [ h1 [] [
-            img [ src "./assets/images/logotype.png" ] []
+        [ h1 []
+            [ img [ src "./assets/images/logotype.png" ] []
             ]
         ]
 
