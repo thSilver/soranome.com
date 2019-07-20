@@ -1,8 +1,8 @@
 module View.Top exposing (viewTop)
 
 import Browser
-import Html exposing (Html, a, br, h1, li, nav, section, text, ul)
-import Html.Attributes exposing (class, href)
+import Html exposing (Html, a, br, h1, li, nav, section, text, ul, h2, img)
+import Html.Attributes exposing (class, href, src)
 
 
 viewTop : Bool -> Html msg
@@ -22,12 +22,13 @@ viewTop isCurrentPage =
             , br [] []
             , text "豊かにする。"
             ]
-        , nav []
-            [ ul []
-                [ li [] [ a [ href "/vision" ] [ text "about us" ] ]
-                , li [] [ a [ href "/team" ] [ text "member" ] ]
-                , li [] [ a [ href "/works" ] [ text "case" ] ]
-                , li [] [ a [ href "/company" ] [ text "company" ] ]
-                ]
-            ]
+        , h2 [] [img [src "./assets/images/logotype.png"][]]
+        -- , nav []
+        --     [ ul []
+        --         [ li [] [ a [ href "/vision" ] [ text "vision" ] ]
+        --         , li [] [ a [ href "/team" ] [ text "team" ] ]
+        --         , li [] [ a [ href "/works" ] [ text "works" ] ]
+        --         , li [] [ a [ href "/company" ] [ text "company" ] ]
+        --         ]
+        --     ]
         ]

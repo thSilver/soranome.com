@@ -109,10 +109,18 @@ view model =
         , nav [ class "global-nav" ]
             [ ul []
                 [ li [] [ a [ href "/" ] [ text "top" ] ]
-                , li [] [ a [ href "/vision" ] [ text "about us" ] ]
-                , li [] [ a [ href "/team" ] [ text "member" ] ]
-                , li [] [ a [ href "/works" ] [ text "case" ] ]
+                , li [] [ a [ href "/vision" ] [ text "vision" ] ]
+                -- , li [] [ a [ href "/team" ] [ text "team" ] ]
+                , li [] [ a [ href "/works" ] [ text "works" ] ]
                 , li [] [ a [ href "/company" ] [ text "company" ] ]
+                ]
+            ]
+        , nav [ class "sns-nav" ]
+            [ ul []
+                [ li [] [
+                a [ href "/" ] [
+                        img [src "./assets/images/twitter.svg"][] ] 
+                        ]
                 ]
             ]
         , node "main"
@@ -133,8 +141,9 @@ view model =
 siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
-        [ h1 [] [ text "sorano me inc." ]
-        , img [ src "./assets/images/logo.png" ] []
+        [ h1 [] [
+            img [ src "./assets/images/logotype.png" ] []
+            ]
         ]
 
 

@@ -15,7 +15,7 @@ viewWorks isCurrentPage =
           else
             class "close"
         ]
-        [ h1 [] [ text "case" ]
+        [ h1 [] [ text "works" ]
         , ul []
             [ li []
                 [ h1 [] [ text "Opening movie." ]

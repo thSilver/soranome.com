@@ -43,17 +43,15 @@ header.site-header
   height: 100%
 
   h1
-    display: none
-  
-  img
     position: absolute
-    top: 0
-    left: 0
-    right: 0
-    bottom: 0
-    display: none
-    width: 60%
-    margin: auto
+    top: 2.2rem
+    left: 2rem
+    display: block
+  
+    img
+      display: block
+      width: 20rem
+      margin: auto
 
 nav.global-nav
   position: absolute
@@ -82,6 +80,16 @@ nav.global-nav
           background: #333
           color: #FFF
 
+nav.sns-nav
+  position: absolute
+  top: 2rem
+  right: 0
+  z-index: 1
+
+  ul
+    padding: 0
+    list-style: none
+
 main
   height: 100%
 
@@ -98,8 +106,6 @@ main
       width: 100%
       height: 100%
       box-sizing: border-box
-      padding: 25rem 10vw 0
-      font-size: 1.7rem
       transition: transform 1s ease
 
       &.open
@@ -111,21 +117,33 @@ main
       h1
         padding-bottom: 5rem
         font-size: 4rem
+        font-weight: 800
         line-height: 1.4
+        letter-spacing: 0.2rem
 
       p
         margin: 2rem 0
-        line-height: 1.4
-        font-size: 1.7rem
+        font-weight: 400
+        line-height: 1.8
+        letter-spacing: 0.1rem
 
 section.top
+  padding: 20rem 10vw 0
   background: hsla(200, 0%, 100%, 0.98)
 
   h1
     font-family: serif
     font-size: 5rem
+    font-weight: normal
     line-height: 1.8
     letter-spacing: 1.8rem
+
+  h2
+    padding-bottom: 5rem
+    
+    img
+      display: block
+      width: 25rem
 
   nav
     ul
@@ -135,13 +153,17 @@ section.top
         font-size: 2rem
     
         a
-          display: block
+          display: inline-block
+          padding: 0 0.2rem
+
+          &:hover
+            background: #333
+            color: #FFF
+
 
 section:not(.top)
+  padding: 25rem 10vw 0
   background: hsla(200, 0%, 100%, 0.98)
-
-  h1
-    text-transform: uppercase
 
 section.works
   ul
@@ -156,6 +178,7 @@ section.works
         padding: 0
         width: 25rem
         font-size: 2rem
+        font-weight: normal
 
         &::after
           position: absolute

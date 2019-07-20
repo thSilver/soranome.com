@@ -15,5 +15,5 @@ viewTeam isCurrentPage =
           else
             class "close"
         ]
-        [ h1 [] [ text "member" ]
+        [ h1 [] [ text "team" ]
         ]
