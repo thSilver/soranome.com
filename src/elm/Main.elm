@@ -118,7 +118,7 @@ view model =
         , node "main"
             []
             [ div []
-                [ viewTop
+                [ viewTop (model.page == TopPage)
                 , viewVision (model.page == VisionPage)
                 , viewTeam (model.page == TeamPage)
                 , viewWorks (model.page == WorksPage)
@@ -134,7 +134,7 @@ siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
         [ h1 [] [ text "sorano me inc." ]
-        , img [ src "./assets/images/icon.png" ] []
+        , img [ src "./assets/images/logo.png" ] []
         ]
 
 

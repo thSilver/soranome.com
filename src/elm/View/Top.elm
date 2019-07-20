@@ -1,14 +1,27 @@
 module View.Top exposing (viewTop)
 
 import Browser
-import Html exposing (Html, a, h1, li, nav, section, text, ul)
+import Html exposing (Html, a, br, h1, li, nav, section, text, ul)
 import Html.Attributes exposing (class, href)
 
 
-viewTop : Html msg
-viewTop =
-    section [ class "top" ]
-        [ h1 [] [ text "sorano me inc." ]
+viewTop : Bool -> Html msg
+viewTop isCurrentPage =
+    section
+        [ class "top"
+        , if isCurrentPage then
+            class "open"
+
+          else
+            class "close"
+        ]
+        [ h1 []
+            [ text "日常を、"
+            , br [] []
+            , text "宇宙ビジネスで"
+            , br [] []
+            , text "豊かにする。"
+            ]
         , nav []
             [ ul []
                 [ li [] [ a [ href "/vision" ] [ text "about us" ] ]
