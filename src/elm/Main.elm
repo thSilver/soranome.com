@@ -144,7 +144,7 @@ siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
         [ h1 []
-            [ img [ src "./assets/images/logotype.png" ] []
+            [ img [ src "./assets/images/logotype_dark.png" ] []
             ]
         ]
 
