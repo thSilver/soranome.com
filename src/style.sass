@@ -16,25 +16,25 @@ html
 
 body
   display: grid
-  grid-auto-flow: column
-  grid-template-columns: 40% 60%
   width: 100%
   height: 100%
   font-size: 1.6rem
+  background-image: url(./assets/images/icon_tile_br.png)
+  background-size: 40rem
   color: #333
 
   @media screen and (max-width: 479px)
-    background: #FFF
+    font-size: 1.5rem
+    grid-auto-flow: row
+    background-image: none
 
   @media screen and (min-width: 480px) and (max-width: 1279px)
-    background: #FFF
-    background-image: url(./assets/images/icon_tile_br.png)
-    background-size: 40rem
+    grid-template-columns: 40% 60%
+    grid-auto-flow: column
 
   @media screen and (min-width: 1280px)
-    background: #FFF
-    background-image: url(./assets/images/icon_tile_br.png)
-    background-size: 40rem
+    grid-template-columns: 40% 60%
+    grid-auto-flow: column
 
 a
   text-decoration: none
@@ -45,6 +45,11 @@ header.site-header
   grid-column: 1
   height: 100%
 
+  @media screen and (max-width: 479px)
+    height: 80vw
+    background-image: url(./assets/images/icon_tile_br.png)
+    background-size: 17rem
+
   h1
     position: absolute
     top: 1.8rem
@@ -53,10 +58,17 @@ header.site-header
     padding: 0.5rem
     background: #000
   
+    @media screen and (max-width: 479px)
+      top: 1rem
+      left: 1rem
+
     img
       display: block
       width: 20rem
       margin: auto
+
+      @media screen and (max-width: 479px)
+        width: 12rem
 
 nav.global-nav
   position: absolute
@@ -65,6 +77,9 @@ nav.global-nav
   right: 0
   margin: 0 auto
   z-index: 1
+
+  @media screen and (max-width: 479px)
+    display: none
 
   ul
     display: grid
@@ -113,11 +128,26 @@ main
       box-sizing: border-box
       transition: transform 1s ease
 
+      @media screen and (max-width: 479px)
+        position: relative
+        height: auto
+
+        & + section
+          border-top: solid 0.3rem hsl(192, 100%, 29%)
+
+
       &.open
         transform: translateX(0%)
 
       &.close
         transform: translateX(100%)
+
+      @media screen and (max-width: 479px)
+        &.open
+          transform: translateX(0%)
+
+        &.close
+          transform: translateX(0%)
 
       h1
         padding-bottom: 5rem
@@ -125,6 +155,10 @@ main
         font-weight: 800
         line-height: 1.4
         letter-spacing: 0.2rem
+
+        @media screen and (max-width: 479px)
+          padding-bottom: 1rem
+          font-size: 3rem
 
       p
         margin: 2rem 0
@@ -134,7 +168,10 @@ main
 
 section.top
   padding: 20rem 0vw 0 10vw
-  background: hsla(200, 0%, 100%, 0.98)
+  background: hsla(192, 0%, 100%, 0.98)
+
+  @media screen and (max-width: 479px)
+    padding: 3rem 1rem 0 2rem
 
   h1
     font-family: serif
@@ -143,12 +180,19 @@ section.top
     line-height: 2.2
     letter-spacing: 1rem
 
+    @media screen and (max-width: 479px)
+      font-size: 1.6rem
+      font-weight: bold
+
   h2
     padding-bottom: 5rem
     
     img
       display: block
       width: 25rem
+
+      @media screen and (max-width: 479px)
+        width: 10rem
 
   nav
     ul
@@ -168,7 +212,10 @@ section.top
 
 section:not(.top)
   padding: 25rem 10vw 0
-  background: hsla(200, 0%, 100%, 0.98)
+  background: hsla(192, 0%, 100%, 0.98)
+
+  @media screen and (max-width: 479px)
+    padding: 2rem 1.5rem 2rem 2rem
 
 section.works
   ul
@@ -176,6 +223,9 @@ section.works
       margin-bottom: 3rem
       list-style: none
       font-size: 2rem
+
+      @media screen and (max-width: 479px)
+        font-size: 1.5rem
 
       h1
         position: relative
@@ -185,10 +235,18 @@ section.works
         font-size: 2rem
         font-weight: normal
 
+        @media screen and (max-width: 479px)
+          width: 55%
+          font-size: 1.5rem
+
         &::after
           position: absolute
           right: 4rem
           content: "/"
+
+          @media screen and (max-width: 479px)
+            right: 1rem
+
 
 section.company
   table
@@ -196,17 +254,36 @@ section.company
     border-collapse: collapse
 
     tr
+      @media screen and (max-width: 479px)
+        display: block
+
+      & + tr
+        border-top: solid 0.1rem 
+
       th
-        padding: 1rem 0
+        padding: 1.5rem 0
         text-align: left
         vertical-align: top
         font-weight: normal
 
+        @media screen and (max-width: 479px)
+          display: block
+          padding: 1rem 0 0
+          font-size: 1.2rem
+          font-weight: bold
+
         &::after
           content: "："
 
+          @media screen and (max-width: 479px)
+            display: none
+
       td
-        padding: 1rem 1rem
+        padding: 1.5rem 1rem
+
+        @media screen and (max-width: 479px)
+          display: block
+          padding: 1rem 0 1rem
 
         ul
           list-style: square
@@ -215,12 +292,22 @@ section.company
           li
             margin-bottom: 1rem
 
+
 footer.site-footer
   position: absolute
   right: 2rem
   bottom: 2rem
   width: 20rem
   text-align: right
+
+  @media screen and (max-width: 479px)
+    position: static
+    width: 100%
+    padding: 2rem 0
+    box-sizing: border-box
+    text-align: center
+    background: hsl(192, 100%, 29%)
+    color: #FFF
 
   .copyright
     font-size: 1.4rem

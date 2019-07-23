@@ -130,7 +130,8 @@ view model =
             [ div []
                 [ viewTop (model.page == TopPage)
                 , viewVision (model.page == VisionPage)
-                , viewTeam (model.page == TeamPage)
+
+                -- , viewTeam (model.page == TeamPage)
                 , viewWorks (model.page == WorksPage)
                 , viewCompany (model.page == CompanyPage)
                 ]
