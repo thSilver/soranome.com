@@ -3,7 +3,7 @@ module Main exposing (main)
 import Browser
 import Browser.Navigation as Nav
 import Html exposing (Html, a, div, footer, h1, header, img, li, nav, node, p, section, text, ul)
-import Html.Attributes exposing (class, href, id, src)
+import Html.Attributes exposing (class, href, id, src, target)
 import Route exposing (Route)
 import Url
 import View.Company exposing (viewCompany)
@@ -106,25 +106,8 @@ view model =
     { title = "sorano me inc."
     , body =
         [ siteHeader
-        , nav [ class "global-nav" ]
-            [ ul []
-                [ li [] [ a [ href "/" ] [ text "top" ] ]
-                , li [] [ a [ href "/vision" ] [ text "vision" ] ]
-
-                -- , li [] [ a [ href "/team" ] [ text "team" ] ]
-                , li [] [ a [ href "/works" ] [ text "works" ] ]
-                , li [] [ a [ href "/company" ] [ text "company" ] ]
-                ]
-            ]
-        , nav [ class "sns-nav" ]
-            [ ul []
-                [ li []
-                    [ a [ href "/" ]
-                        [ img [ src "./assets/images/twitter.svg" ] []
-                        ]
-                    ]
-                ]
-            ]
+        , globalNavigation
+        , snsNavigation
         , node "main"
             []
             [ div []
@@ -145,7 +128,36 @@ siteHeader : Html Msg
 siteHeader =
     header [ class "site-header" ]
         [ h1 []
-            [ img [ src "./assets/images/logotype_dark.png" ] []
+            [ a [ href "/" ]
+                [ img [ src "./assets/images/logotype_dark.png" ] []
+                ]
+            ]
+        ]
+
+
+globalNavigation : Html Msg
+globalNavigation =
+    nav [ class "global-nav" ]
+        [ ul []
+            [ li [] [ a [ href "/" ] [ text "top" ] ]
+            , li [] [ a [ href "/vision" ] [ text "vision" ] ]
+
+            -- , li [] [ a [ href "/team" ] [ text "team" ] ]
+            , li [] [ a [ href "/works" ] [ text "works" ] ]
+            , li [] [ a [ href "/company" ] [ text "company" ] ]
+            ]
+        ]
+
+
+snsNavigation : Html Msg
+snsNavigation =
+    nav [ class "sns-nav" ]
+        [ ul []
+            [ li []
+                [ a [ href "https://twitter.com/sorano_me", target "_blank" ]
+                    [ img [ src "./assets/images/twitter.svg" ] []
+                    ]
+                ]
             ]
         ]
 

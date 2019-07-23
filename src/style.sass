@@ -55,6 +55,7 @@ header.site-header
     position: absolute
     top: 2rem
     left: 2rem
+    z-index: 2
     display: block
     padding: 0.5rem
     background: #000
@@ -76,8 +77,8 @@ nav.global-nav
   top: 2rem
   left: 0
   right: 0
-  margin: 0 auto
   z-index: 1
+  margin: 0 auto
 
   @media screen and (max-width: 479px)
     display: none
@@ -92,6 +93,8 @@ nav.global-nav
       padding: 0.5rem 0
       list-style: none
       font-size: 1.7rem
+      font-weight: bold
+      letter-spacing: 0.05rem
 
       a
         display: block
@@ -104,7 +107,7 @@ nav.global-nav
 nav.sns-nav
   position: absolute
   top: 2rem
-  right: 0
+  right: 2rem
   z-index: 1
 
   ul
