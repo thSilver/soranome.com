@@ -141,7 +141,6 @@ main
         & + section
           border-top: solid 0.3rem hsl(192, 100%, 29%)
 
-
       &.open
         transform: translateX(0%)
 
@@ -257,20 +256,26 @@ section.company
       @media screen and (max-width: 479px)
         display: block
 
-      & + tr
-        border-top: solid 0.1rem 
+      @media screen and (min-width: 480px) and (max-width: 1279px)
+        &:nth-child(odd)
+          background: #EEE
+
+      @media screen and (min-width: 1280px)
+        &:nth-child(odd)
+          background: #EEE
 
       th
-        padding: 1.5rem 0
+        padding: 1.5rem 1.5rem
         text-align: left
         vertical-align: top
         font-weight: normal
 
         @media screen and (max-width: 479px)
           display: block
-          padding: 1rem 0 0
-          font-size: 1.2rem
+          padding: 0.5rem 0.5rem
+          font-size: 1.1rem
           font-weight: bold
+          background: #EEE
 
         &::after
           content: "："
@@ -283,7 +288,7 @@ section.company
 
         @media screen and (max-width: 479px)
           display: block
-          padding: 1rem 0 1rem
+          padding: 1rem 0.5rem 2rem
 
         ul
           list-style: square
