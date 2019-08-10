@@ -10,6 +10,7 @@ type Route
     | Team
     | Works
     | Company
+    | Contact
 
 
 parse : Url.Url -> Maybe Route
@@ -27,6 +28,7 @@ parser =
                     , map Team (s "team")
                     , map Works (s "works")
                     , map Company (s "company")
+                    , map Contact (s "contact")
                     ]
         , Parser.oneOf
             [ map Top top
@@ -34,5 +36,6 @@ parser =
             , map Team (s "team")
             , map Works (s "works")
             , map Company (s "company")
+            , map Contact (s "contact")
             ]
         ]

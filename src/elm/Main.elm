@@ -7,6 +7,7 @@ import Html.Attributes exposing (class, href, id, src, target)
 import Route exposing (Route)
 import Url
 import View.Company exposing (viewCompany)
+import View.Contact exposing (viewContact)
 import View.Team exposing (viewTeam)
 import View.Top exposing (viewTop)
 import View.Vision exposing (viewVision)
@@ -41,6 +42,7 @@ type Page
     | TeamPage
     | WorksPage
     | CompanyPage
+    | ContactPage
 
 
 init : () -> Url.Url -> Nav.Key -> ( Model, Cmd Msg )
@@ -96,6 +98,9 @@ goTo maybeRoute model =
         Just Route.Company ->
             ( { model | page = CompanyPage }, Cmd.none )
 
+        Just Route.Contact ->
+            ( { model | page = ContactPage }, Cmd.none )
+
 
 
 -- VIEW
@@ -117,6 +122,7 @@ view model =
                 -- , viewTeam (model.page == TeamPage)
                 , viewWorks (model.page == WorksPage)
                 , viewCompany (model.page == CompanyPage)
+                , viewContact (model.page == ContactPage)
                 ]
             ]
         , siteFooter
@@ -145,6 +151,7 @@ globalNavigation =
             -- , li [] [ a [ href "/team" ] [ text "team" ] ]
             , li [] [ a [ href "/works" ] [ text "works" ] ]
             , li [] [ a [ href "/company" ] [ text "company" ] ]
+            , li [] [ a [ href "/contact" ] [ text "contact" ] ]
             ]
         ]
 
