@@ -2,7 +2,7 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation as Nav
-import Html exposing (Html, a, div, footer, h1, header, img, li, nav, node, p, section, text, ul)
+import Html exposing (Html, a, div, footer, h1, header, i, img, li, nav, node, p, section, span, text, ul)
 import Html.Attributes exposing (class, href, id, src, target)
 import Route exposing (Route)
 import Url
@@ -162,8 +162,7 @@ snsNavigation =
         [ ul []
             [ li []
                 [ a [ href "https://twitter.com/sorano_me", target "_blank" ]
-                    [ img [ src "./assets/images/twitter.svg" ] []
-                    ]
+                    [ i [ class "fab fa-twitter" ] [] ]
                 ]
             ]
         ]
