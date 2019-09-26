@@ -23,7 +23,7 @@ viewContact isCurrentPage =
         , form
             [ name "contact"
             , method "POST"
-            , attribute "data-netlify" "true"
+            , attribute "netlify" "true"
             ]
             [ p []
                 [ label []
