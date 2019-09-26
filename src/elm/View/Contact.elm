@@ -21,7 +21,10 @@ viewContact isCurrentPage =
         [ h1 []
             [ text "contact" ]
         , form
-            []
+            [ name "contact"
+            , method "POST"
+            , attribute "data-netlify" "true"
+            ]
             [ p []
                 [ label []
                     [ text "Your Name:"
