@@ -120,7 +120,7 @@ view model =
                 , viewVision (model.page == VisionPage)
 
                 -- , viewTeam (model.page == TeamPage)
-                , viewWorks (model.page == WorksPage)
+                -- , viewWorks (model.page == WorksPage)
                 , viewCompany (model.page == CompanyPage)
                 , viewContact (model.page == ContactPage)
                 ]
@@ -149,7 +149,7 @@ globalNavigation =
             , li [] [ a [ href "/vision" ] [ text "vision" ] ]
 
             -- , li [] [ a [ href "/team" ] [ text "team" ] ]
-            , li [] [ a [ href "/works" ] [ text "works" ] ]
+            -- , li [] [ a [ href "/works" ] [ text "works" ] ]
             , li [] [ a [ href "/company" ] [ text "company" ] ]
             , li [] [ a [ href "/contact" ] [ text "contact" ] ]
             ]

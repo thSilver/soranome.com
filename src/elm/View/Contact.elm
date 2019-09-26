@@ -34,15 +34,16 @@ viewContact isCurrentPage =
                     , input [ type_ "email", name "email" ] []
                     ]
                 ]
-            , p []
-                [ label []
-                    [ text "Your Role:"
-                    , select [ name "role[]" ]
-                        [ option [ value "leader" ] [ text "Leader" ]
-                        , option [ value "follower" ] [ text "Follower" ]
-                        ]
-                    ]
-                ]
+
+            -- , p []
+            --     [ label []
+            --         [ text "Your Role:"
+            --         , select [ name "role[]" ]
+            --             [ option [ value "leader" ] [ text "Leader" ]
+            --             , option [ value "follower" ] [ text "Follower" ]
+            --             ]
+            --         ]
+            --     ]
             , p []
                 [ label []
                     [ text "Message:"
