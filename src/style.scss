@@ -367,6 +367,14 @@ section.company {
 }
 
 section.contact {
+  a {
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    background: hsl(192, 100%, 29%);
+    color: #fff;
+    border-radius: 1rem;
+  }
+
   table {
     width: 100%;
     border-collapse: collapse;
