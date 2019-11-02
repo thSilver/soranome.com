@@ -27,10 +27,10 @@ viewCompany isCurrentPage =
                 [ th [] [ text "住所" ]
                 , td [] [ text "東京都" ]
                 ]
-            , tr []
+            {--, tr []
                 [ th [] [ text "設立" ]
                 , td [] [ text "準備中" ]
-                ]
+                ]--}
             , tr []
                 [ th [] [ text "代表" ]
                 , td [] [ text "城戸 彩乃" ]
