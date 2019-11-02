@@ -21,7 +21,7 @@ viewCompany isCurrentPage =
             []
             [ tr []
                 [ th [] [ text "社名" ]
-                , td [] [ text "株式会社 sorano me（準備中）" ]
+                , td [] [ text "株式会社 sorano me" ]
                 ]
             , tr []
                 [ th [] [ text "住所" ]
