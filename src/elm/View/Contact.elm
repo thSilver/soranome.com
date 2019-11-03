@@ -22,6 +22,8 @@ viewContact isCurrentPage =
             [ text "contact" ]
         , p [] [ text "下記のアドレスまでお問い合わせください" ]
         , a [ href "mailTo:contact@soranome.com" ] [ text "contact@soranome.com" ]
+        , p [] [ text "下記のアドレスまでお問い合わせください" ]
+        , a [ href "mailTo:contact@soranome.com" ] [ text "contact@soranome.com" ]
         ]
 
 
